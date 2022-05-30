@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Tictactoe!</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Hello World!" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta
+      property="og:description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    
+    <!--      -->
+
+    <!-- Import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+  </head>
+  <body class="pink">
+    
+    <!-- color scheme picker -->
+    <header>
+      <div class="players">
+        <div>Players:</div>
+        <div class="number" id="single">1</div>
+        <div class="number active" id="multi">2</div>
+      </div>
+      <div class="chooseColor">
+        <div>Theme:</div>
+        <div class="shape curved"></div>
+        <div class="color" id="pink"></div>
+        <div class="color" id="blue"></div>
+        <div class="color" id="green"></div>
+      </div>
+    </header>  
+    <h1>Tic-Tac-Toe</h1>
+    <section class="board">
+      <!-- Top Row -->
+      <div class="block" id="one"></div>
+      <div class="block" id="two"></div>
+      <div class="block" id="three"></div>
+      
+      <!-- Middle Row -->
+      <div class="block" id="four"></div>
+      <div class="block" id="five"></div>
+      <div class="block" id="six"></div>
+
+      <!-- Bottom Row -->
+      <div class="block" id="seven"></div>
+      <div class="block" id="eight"></div>
+      <div class="block" id="nine"></div>
+      
+      <!-- strikes -->
+      <div class="strike win123"></div>
+      <div class="strike win456"></div>
+      <div class="strike win789"></div>
+      <div class="strike win159"></div>
+      <div class="strike win357"></div>
+      <div class="strike win147"></div>
+      <div class="strike win258"></div>
+      <div class="strike win369"></div>
+      
+    </section>
+    <section class="controls">
+      <!--    Reset button    -->
+      <div class="reset">Reset</div>
+<!--       <div id="winner"></div> -->
+    </section>
+    <!-- PopUp -->
+    <div class="popup invisible">
+      <div class="popupText">
+        <div class="winnerText">X Wins!</div>
+        <div class="playAgain reset">Play again</div>
+      </div>
+    </div>
+  </body>
+</html>
