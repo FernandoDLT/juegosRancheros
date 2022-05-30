@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  color: red;
+  font-size: 1.8rem;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: system-ui;
+  overflow: hidden;
+}
+
+.wrapper {
+  margin-top: 2em;
+}
+
+.nickname-container {
+  text-align: center;
+  margin-top: 0.6em;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.search {
+  padding: 0.5em 0.6em;
+  font-size: 1.1rem;
+}
+
+.btn {
+  padding: 0.5em;
+  font-size: 1.1rem;
+  margin-left: 0.5em;
+}
+
+.link {
+  font-size: 1.1em;
+}
+.link a {
+  font-weight: bold;
+  color: rgb(2, 2, 140);
+  margin-left: 0.3em;
+}
