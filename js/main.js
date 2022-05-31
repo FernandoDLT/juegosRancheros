@@ -9,7 +9,12 @@ async function makeReq() {
 
   console.log(data);
   let status = document.querySelector("#personStatus");
-  if (userName == "game" || "rock") {
+  if (
+    userName == "game" ||
+    userName == "rock" ||
+    userName == "scissors" ||
+    userName == "paper"
+  ) {
     document.querySelector("#personName").textContent = data.name;
     document.querySelector("#personOccupation").textContent =
       data.currentOccupation;
