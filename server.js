@@ -78,7 +78,11 @@ const server = http.createServer((req, res) => {
             currentOccupation: "play both",
           };
           res.end(JSON.stringify(objToJson));
-        } else if (params["student"] == "rock" || "paper") {
+        } else if (
+          params["student"] == "rock" ||
+          params["student"] == "paper" ||
+          params["student"] == "scissors"
+        ) {
           const objToJson = {
             name: "rock-paper-scissors",
             status: "/rock-paper-scissors/index.html",
