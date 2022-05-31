@@ -1,6 +1,27 @@
+/* Box Model Hack */
 * {
   box-sizing: border-box;
 }
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+clear: both;
+}
+
+/*Setting Rems*/
+html{
+  font-size: 62.5%;
+}
+
 h1 {
   color: red;
   font-size: 1.8rem;
@@ -15,17 +36,17 @@ body {
 }
 
 .wrapper {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .nickname-container {
   text-align: center;
-  margin-top: 0.6em;
+  margin-top: 0.6rem;
 }
 .form {
   display: flex;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .search {
@@ -46,4 +67,16 @@ body {
   font-weight: bold;
   color: rgb(2, 2, 140);
   margin-left: 0.3em;
+}
+
+
+/*Nav*/
+nav.header{
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+}
+
+img.logo{
+width:40rem;
 }

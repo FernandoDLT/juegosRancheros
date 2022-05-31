@@ -86,3 +86,15 @@ h1 {
   opacity: 1;
   transform: translate(1.25);
 }
+
+.link {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.link a {
+  margin-left: 0.3em;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: rgb(78, 78, 249);
+}
