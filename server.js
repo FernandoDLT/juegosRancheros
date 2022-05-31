@@ -37,24 +37,16 @@ const server = http.createServer((req, res) => {
       app.use("./images", express.static("images"));
       break;
     case "/rock-paper-scissors/images/rock.png":
-      let imgr = fs.readFileSync("rock-paper-scissors/images/rock.png");
-      res.writeHead(200, { "Content-Type": "image/gif" });
-      res.end(imgr, "binary");
+      createfile("rock-paper-scissors/images/rock.png", "image/gif");
       break;
     case "/rock-paper-scissors/images/paper.png":
-      let imgp = fs.readFileSync("rock-paper-scissors/images/paper.png");
-      res.writeHead(200, { "Content-Type": "image/gif" });
-      res.end(imgp, "binary");
+      createfile("rock-paper-scissors/images/paper.png", "image/gif");
       break;
     case "/rock-paper-scissors/images/scissors.png":
-      let imgs = fs.readFileSync("rock-paper-scissors/images/scissors.png");
-      res.writeHead(200, { "Content-Type": "image/gif" });
-      res.end(imgs, "binary");
+      createfile("rock-paper-scissors/images/scissors.png", "image/gif");
       break;
     case "/images/logo.png":
-      let logo = fs.readFileSync("images/logo.png");
-      res.writeHead(200, { "Content-Type": "image/gif" });
-      res.end(logo, "binary");
+      createfile("images/logo.png", "image/gif");
       break;
     case "/api":
       res.writeHead(200, { "Content-Type": "application/json" });
