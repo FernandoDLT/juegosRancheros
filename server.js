@@ -51,6 +51,11 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-Type": "image/gif" });
       res.end(imgs, "binary");
       break;
+    case "/images/logo.png":
+      let logo = fs.readFileSync("images/logo.png");
+      res.writeHead(200, { "Content-Type": "image/gif" });
+      res.end(logo, "binary");
+      break;
     case "/api":
       res.writeHead(200, { "Content-Type": "application/json" });
 
