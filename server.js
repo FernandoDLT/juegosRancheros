@@ -107,6 +107,12 @@ const server = http.createServer((req, res) => {
         res.end();
       });
       break;
+    case "/assets/css/main.css":
+      fs.readFile("assets/css/main.css", (err, data) => {
+        res.write(data);
+        res.end();
+       });
+      break;
     case "/tic-tac-toe/style.css":
       fs.readFile("tic-tac-toe/style.css", (err, data) => {
         res.write(data);
@@ -121,6 +127,9 @@ const server = http.createServer((req, res) => {
       break;
     case "/js/main.js":
       createfile("js/main.js", "text/javascript");
+      break;
+    case "/assets/js/main.js":
+      createfile("assets/js/main.js", "text/javascript");
       break;
     case "/tic-tac-toe/app.js":
       createfile("tic-tac-toe/app.js", "text/javascript");
