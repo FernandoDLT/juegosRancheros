@@ -23,8 +23,8 @@ html{
 }
 
 h1 {
-  color: red;
   font-size: 1.8rem;
+  text-align: center;
 }
 body {
   margin: 0;
@@ -33,10 +33,12 @@ body {
   justify-content: center;
   font-family: system-ui;
   overflow: hidden;
+ 
 }
 
 .wrapper {
   margin-top: 2rem;
+  width:100%;
 }
 
 .nickname-container {
@@ -65,16 +67,16 @@ body {
 }
 .link a {
   font-weight: bold;
-  color: rgb(2, 2, 140);
   margin-left: 0.3em;
 }
 
 
 /*Nav*/
-nav.header{
+header{
   width:100%;
   display:flex;
   justify-content:space-around;
+ 
 }
 
 img.logo{
