@@ -2012,7 +2012,7 @@ input, select, textarea {
 		background: #00c1cb8b;
 		text-decoration: none;
 		    /* border: solid 4px #00c2cb; */
-			border-radius: 32%;
+			/* border-radius: 32%; */
 			padding: 0.8em;
 			cursor: pointer;
 			outline: 0;
@@ -2025,9 +2025,9 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			color: #fae20a;
+			color: #ffffff;
 			border-color:  #fae20a;
-			background: #fae20a63;
+			background: #fae20a;
 		}
 
 /* Icons */
@@ -2307,7 +2307,7 @@ input, select, textarea {
 		#hero .button {
 			background: #fff;
 			border-color: rgba(255, 255, 255, 0);
-			color: #f08c89;
+			color: #fae20a ;
 			font-size: 1.25em;
 		}
 

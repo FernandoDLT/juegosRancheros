@@ -48,6 +48,21 @@ const server = http.createServer((req, res) => {
     case "/images/logo.png":
       createfile("images/logo.png", "image/gif");
       break;
+    case "/assets/css/images/header.svg":
+      createfile("assets/css/images/header.svg", "image/svg+xml");
+      break;
+    case "/images/bee.png":
+      createfile("images/bee.png", "image/gif");
+      break;
+    case "/images/rock.png":
+      createfile("images/rock.png", "image/gif");
+      break;
+    case "/images/snake.png":
+      createfile("images/snake.png", "image/gif");
+      break;
+    case "/images/tic.png":
+      createfile("images/tic.png", "image/gif");
+      break;
     case "/api":
       res.writeHead(200, { "Content-Type": "application/json" });
 
@@ -126,6 +141,21 @@ const server = http.createServer((req, res) => {
       break;
     case "/assets/js/main.js":
       createfile("assets/js/main.js", "text/javascript");
+      break;
+    case "/assets/js/breakpoints.min.js":
+      createfile("assets/js/breakpoints.min.js", "text/javascript");
+      break;
+    case "/assets/js/browser.min.js":
+      createfile("assets/js/browser.min.js", "text/javascript");
+      break;
+    case "/assets/js/jquery.dropotron.min.js":
+      createfile("assets/js/jquery.dropotron.min.js", "text/javascript");
+      break;
+    case "/assets/js/jquery.min.js":
+      createfile("assets/js/jquery.min.js", "text/javascript");
+      break;
+    case "/assets/js/util.js":
+      createfile("assets/js/util.js", "text/javascript");
       break;
     case "/tic-tac-toe/app.js":
       createfile("tic-tac-toe/app.js", "text/javascript");
