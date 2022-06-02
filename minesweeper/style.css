@@ -1,0 +1,44 @@
+
+body {
+  background-color: #03989E;
+  text-align: center;
+}
+
+.grid {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fdf28c;
+  margin: auto;
+}
+
+.grid div {
+  height: 38px;
+  width: 38px;
+  border: 1px solid rgb(255, 162, 48);
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.checked {
+  background-color: #FAE20A;
+}
+
+.bee {
+  background-color: rgb(129, 129, 129);
+}
+
+#status {
+  color:#FAE20A;
+}
+
+
+
+button {
+  background: #5ce1e6;
+  width: 80px;
+  height: 40px;
+
+}
