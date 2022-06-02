@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <script src="app.js" defer></script>
+   <title>Rock Paper Scisoors Game</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <h1>Choose you step</h1>
+      <p class="link">go back to main page<a href="../">main</a></p>
+      <div class="choose">
+         <button class="btn" type="button" data-selection="rock"><img class="img-ch" src="images/rock.png"
+               alt=""></button>
+         <button class="btn" type="button" data-selection="paper"><img class="img-ch" src="images/paper.png"
+               alt=""></button>
+         <button class="btn" type="button" data-selection="scissors"><img class="img-ch" src="images/scissors.png"
+               alt=""></button>
+      </div>
+      <div class="result">
+         <div>you : <span class="result-score you" data-your-score="">0</span></div>
+         <div data-final-column>computer : <span class="result-score com" data-computer-score="">0</span></div>
+         <!-- <div class="result-sel winner"></div>
+         <div class="result-sel winner"></div> -->
+      </div>
+   </div>
+</body>
+
+</html>
