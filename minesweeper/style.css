@@ -1,7 +1,20 @@
+/* nav */
+#header-wrapper{
+  z-index: 2;
+  background-color: black;
+}
+#logo img,
+.game-logo img{
+  height:100px;
+}
+
+
+
 
 body {
-  background-color: #03989E;
+  /* background-color: #03989E;*/
   text-align: center;
+  background: #111c1c;
 }
 
 .grid {
@@ -30,19 +43,22 @@ body {
   background-color: rgb(129, 129, 129);
 } */
 
-#status {
-  color:#FAE20A;
+#status, h3 {
+  /* color: #5ce1e6; */
+  color: lightgrey;
 }
 
 p {
   width: 400px;
   margin: auto;
   margin-top: 20px;
+  color: #CCC;
 }
 
 button {
   background: #5ce1e6;
   width: 80px;
   height: 40px;
-
+  border-radius: 8px;
+  color:#111c1c;
 }
