@@ -2,9 +2,8 @@ document.querySelector("#clickMe").addEventListener("click", makeReq);
 
 // document.getElementById("hide").style.display = "none";
 async function makeReq() {
-  let params = ["student", "games"];
   const userName = document.querySelector("#userName").value;
-  const res = await fetch(`/api?student=${userName}`);
+  const res = await fetch(`/api?games=${userName}`);
   const data = await res.json();
 
   console.log(data);
