@@ -4,34 +4,13 @@
 
 body {
   margin: 0;
-  background-image: url("images/header.svg");
-  background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg,   #032222 15%, #000000 55%);
-  background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg,   #032222 15%, #000000 55%);
-  background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg,   #032222 15%, #000000 55%);
-  background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg,  #032222 15%, #000000 55%);
-  background-color: #000000;
-  background-size: 100% 620%;
-  background-size: 128px 128px, 100% 620%, auto;
-  background-repeat: repeat, no-repeat, no-repeat;
+  background-color: rgb(30, 30, 30);
   color: aliceblue;
-  font-family: "Titillium Web", sans-serif;
+  font-family: system-ui;
 }
-.logos {
-  display: flex;
-}
-.tic {
-  flex: 2;
-}
-.home {
-  flex: 1.5;
-}
-/* #logo {
-  display: flex;
-  justify-content: center;
-} */
-#logo img,
-.game-logo img {
-  height: 100px;
+
+.wrapper {
+  margin-top: 1.5em;
 }
 h1 {
   color: aqua;
@@ -40,7 +19,6 @@ h1 {
 .choose {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
 }
 .btn {
   background: none;
@@ -87,10 +65,10 @@ h1 {
 }
 
 .result-score.you {
-  color: #fae20a;
+  color: rgb(3, 169, 114);
 }
 .result-score.com {
-  color: #fae20a;
+  color: red;
 }
 
 .result-sel {
@@ -119,23 +97,4 @@ h1 {
   font-weight: bold;
   font-size: 1.4rem;
   color: rgb(78, 78, 249);
-}
-
-#topmenu {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-#title {
-  justify-self: center;
-  width: 400px;
-  margin: 20px;
-}
-
-#homebutton {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  margin: 20px;
 }
