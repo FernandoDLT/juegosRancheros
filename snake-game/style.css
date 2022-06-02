@@ -179,34 +179,14 @@ section {
 }
 
 /* apple */
-.apple {
-    background: red;
-    border-radius: 50%;
-    position: relative;
-}
-
-.apple::after{
-    position: absolute;
-    content:"";
-    width: 40%;
-    height: 40%;
-    border-radius: 50% 0 50% 0;
-    background: green;
-    top: 1px;
-    right: 1px;
+.apple{
+    background-image: url("../snake-game/egg-two.png");
+    background-size: contain;
 }
 
 .buttons{
     display: none;
 }
-/* button.left {
-}
-button.down {
-}
-button.right {
-} */
-/* start menu */
-
 
 /* Start menu pop up */
 .popup.invisible {
@@ -279,44 +259,6 @@ button.right {
       margin-left: 50px;
   }
 
-   /*
-  .snake {
-    margin-top: 10px;
-    margin-left: 15px;
-    width: 150px;
-    height: 50px;
-    background-color: #00c2cb;
-    text-align: center;
-    border-radius: 0 10px 10px 0;
-    position: relative;
-  }
-
-  .snake::before,
-  .snake::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 4px;
-    height: 4px;
-    border-radius: 2px;
-    background: black;
-    right: 5px;
-}
-
-.snake::before{
-    top: 10px;
-}
-
-.snake::after{
-    bottom: 10px;
-}
-
-.snake .tail{
-    position:absolute;
-    left: -48px;
-}*/
-
-
 .snake {
     display: flex;
     flex-wrap: wrap;
@@ -388,6 +330,8 @@ button.right {
         padding: 0;
         width: calc(100% / 3 - 1px);
         height: 50px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 400;
         font-size: 14px;
         text-align: center;
     }

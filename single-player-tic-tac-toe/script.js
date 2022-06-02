@@ -13,7 +13,7 @@ let winner = document.querySelector('.winnerText')
 let singlePlayer = document.querySelector('#single')
 let multiPlayer = document.querySelector('#multi')
 let xTurn = true;
-let numberOfPlayers = 2
+let numberOfPlayers = 1
 let winCases = {
     win123:[pos1, pos2, pos3],
     win456:[pos4, pos5, pos6],
