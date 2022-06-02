@@ -5,25 +5,27 @@
   margin: 0;
   padding: 0;
 }
-
+.game-logo{
+  height: 150px;
+}
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #A14A85;
+  /* background-color: #A14A85; */
   font-family: 'Raleway', sans-serif;
 }
 
 body.pink {
-  background-color: #A14A85;
+  /* background-color: #A14A85; */
 }
 
 body.blue {
-  background-color: #257CBA;
+  /* background-color: #257CBA; */
 }
 
-body.green {
+/* body.green {
   background-color: #236343;
-}
+} */
 
 .container {
   display: grid;
@@ -57,7 +59,7 @@ header,
   height: 25px;
   width: 30px;
   margin: 5px;
-  border: 2px solid #000000;
+  border: 1px solid white;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
@@ -87,16 +89,16 @@ header,
 }
 
 #blue {
-  background: #257CBA /*#7DC7FB; */
+  background: #5ce1e6; /*#7DC7FB; */
 }
 
 #pink {
-  background: #A14A85/*#E6AED4*/
+  background: #fae20a;/*#E6AED4*/
 }
 
-#green {
-  background: #236343 /*#77E6B8;*/ 
-}
+/* #green {
+  background: #236343 #77E6B8; 
+} */
 
 h1 {
   margin-top: 15px;
@@ -133,16 +135,16 @@ h1 {
 
 /* add curved edges to theme */
 body.pink .curvedEdge{
-  border-color: #A14A85;
+  border-color: #000000;
 }
 
 body.blue .curvedEdge{
-  border-color: #257CBA;
+  border-color: #000000;
 }
 
-body.green .curvedEdge{
+/* body.green .curvedEdge{
   border-color: #236343;
-}
+} */
 
 .block.curvedEdge {
   border-radius: 10px;
@@ -160,16 +162,16 @@ body.green .curvedEdge{
 }
 
 body.pink .strike {
-  border-color: #612D50;
+  border-color: #8F8130;
 }
 
 body.blue .strike {
-  border-color: #134161;
+  border-color: #005C61;
 }
 
-body.green .strike {
+/* body.green .strike {
   border-color: #18452E;
-}
+} */
 
 
 .strike.win123,
@@ -267,11 +269,11 @@ body.green .strike {
 }
 
 body.pink .block:hover {
-  background: #E6AED4;
+  background: #fae20a;
 }
 
 body.blue .block:hover {
-  background:#7DC7FB;
+  background:#5ce1e6;
 }
 
 body.green .block:hover {
@@ -291,8 +293,8 @@ body.green .block:hover {
   width: auto;
   height: fit-content;
   border: none;
-  background: #000000;
-  color: #ffffff;
+  background: white;
+  color: black;
   border-radius: 2.5rem;
 /*   margin-block: 2.5rem; */
   cursor: pointer;
@@ -326,7 +328,7 @@ body.green .block:hover {
   bottom: 0;
   left: 0;
   right:0;
-  background: rgba(255,255,255,0.5);
+  background: rgba(0,0,0,0.5);;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,7 +337,7 @@ body.green .block:hover {
 .popupText {
   width: 100%;
   max-width: 300px;
-  background: #eeeeee;
+  background: #111c1c;
   padding: 20px;
   border-radius: 15px;
   text-align: center;
