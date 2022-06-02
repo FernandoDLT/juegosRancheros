@@ -14,7 +14,16 @@
 body {
   /* background-color: #03989E;*/
   text-align: center;
-  background: #111c1c;
+  background-image: url("images/header.svg");
+		background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg,   #032222 15%, #000000 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg,   #032222 15%, #000000 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg,   #032222 15%, #000000 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg,  #032222 15%, #000000 55%);
+		background-color: #000000;
+		background-size: 100% 620%;
+		background-size: 128px 128px, 100% 620%, auto;
+		background-repeat: repeat, no-repeat, no-repeat;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .grid {
@@ -52,7 +61,7 @@ p {
   width: 400px;
   margin: auto;
   margin-top: 20px;
-  color: #CCC;
+  color: #fdf28c;;
 }
 
 button {
@@ -61,4 +70,24 @@ button {
   height: 40px;
   border-radius: 8px;
   color:#111c1c;
+}
+
+
+#topmenu{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#title{
+  justify-self:center;
+  width:400px;
+  margin:20px;
+}
+
+#homebutton{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100px;
+ margin: 20px;;
 }
