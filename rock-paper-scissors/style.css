@@ -4,9 +4,16 @@
 
 body {
   margin: 0;
-  background-image: linear-gradient(75deg, #032222 15%, #000000 55%);
+  background-image: url("images/header.svg");
+  background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg,   #032222 15%, #000000 55%);
+  background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg,   #032222 15%, #000000 55%);
+  background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg,   #032222 15%, #000000 55%);
+  background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg,  #032222 15%, #000000 55%);
+  background-color: #000000;
+  background-size: 100% 620%;
+  background-size: 128px 128px, 100% 620%, auto;
+  background-repeat: repeat, no-repeat, no-repeat;
   color: aliceblue;
-
   font-family: "Titillium Web", sans-serif;
 }
 .logos {
