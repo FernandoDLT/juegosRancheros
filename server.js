@@ -64,6 +64,8 @@ const server = http.createServer((req, res) => {
       break;
     case "/images/tic.png":
       createfile("images/tic.png", "image/gif");
+    case "/images/banner.png":
+      createfile("images/banner.png", "image/gif");
       break;
     case "/api":
       res.writeHead(200, { "Content-Type": "application/json" });
