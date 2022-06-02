@@ -7,6 +7,10 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 8000;
 
+app.set("view engine", "ejs");
+app.set("views", __dirname + "/public");
+app.use(express.static("public/assets/"));
+
 const server = http.createServer((req, res) => {
   function createfile(filename, contentType) {
     fs.readFile(filename, (err, data) => {
@@ -33,8 +37,6 @@ const server = http.createServer((req, res) => {
       break;
     case "/rock-paper-scissors/index.html":
       createfile("rock-paper-scissors/index.html", "text/html");
-      app.use(express.static("images"));
-      app.use("./images", express.static("images"));
       break;
     case "/rock-paper-scissors/images/rock.png":
       createfile("rock-paper-scissors/images/rock.png", "image/gif");
@@ -66,49 +68,31 @@ const server = http.createServer((req, res) => {
     case "/api":
       res.writeHead(200, { "Content-Type": "application/json" });
 
-      if ("student" in params) {
-        let adjArray = [
-          "colorful",
-          "happy",
-          "enthusiastic",
-          "agreeable",
-          "funky",
-        ];
-        let verbArray = ["dancing", "walking", "working", "coding", "playing"];
-        if (adjArray.includes(params["student"])) {
-          let num = Math.floor(Math.random() * adjArray.length);
-          const objToJson = {
-            name: adjArray[num],
-            status: verbArray[num],
-            currentOccupation: "Leon",
-          };
-          res.end(JSON.stringify(objToJson));
-        } else if (params["student"] == "game") {
-          const objToJson = {
-            name: "tic-tac-toe",
-            status: "/tic-tac-toe/index.html",
-            currentOccupation: "play both",
-          };
-          res.end(JSON.stringify(objToJson));
-        } else if (
-          params["student"] == "rock" ||
-          params["student"] == "paper" ||
-          params["student"] == "scissors"
-        ) {
-          const objToJson = {
-            name: "rock-paper-scissors",
-            status: "/rock-paper-scissors/index.html",
-            currentOccupation: "play both",
-          };
-          res.end(JSON.stringify(objToJson));
-        } else {
-          const objToJson = {
-            name: "unknown",
-            status: "unknown",
-            currentOccupation: "unknown",
-          };
-          res.end(JSON.stringify(objToJson));
-        }
+      if (params["games"] == "game") {
+        const objToJson = {
+          name: "tic-tac-toe",
+          status: "/tic-tac-toe/index.html",
+          currentOccupation: "play both",
+        };
+        res.end(JSON.stringify(objToJson));
+      } else if (
+        params["student"] == "rock" ||
+        params["student"] == "paper" ||
+        params["student"] == "scissors"
+      ) {
+        const objToJson = {
+          name: "rock-paper-scissors",
+          status: "/rock-paper-scissors/index.html",
+          currentOccupation: "play both",
+        };
+        res.end(JSON.stringify(objToJson));
+      } else {
+        const objToJson = {
+          name: "unknown",
+          status: "unknown",
+          currentOccupation: "unknown",
+        };
+        res.end(JSON.stringify(objToJson));
       }
 
       break;
@@ -122,7 +106,7 @@ const server = http.createServer((req, res) => {
       fs.readFile("assets/css/main.css", (err, data) => {
         res.write(data);
         res.end();
-       });
+      });
       break;
     case "/tic-tac-toe/style.css":
       fs.readFile("tic-tac-toe/style.css", (err, data) => {
