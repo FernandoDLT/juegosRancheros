@@ -26,15 +26,19 @@ body {
   background-color: #FAE20A;
 }
 
-.bee {
+/* .bee {
   background-color: rgb(129, 129, 129);
-}
+} */
 
 #status {
   color:#FAE20A;
 }
 
-
+p {
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
 
 button {
   background: #5ce1e6;
