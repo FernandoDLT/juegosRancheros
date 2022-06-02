@@ -9,8 +9,6 @@
 body {
   width: 100vw;
   height: 100vh;
-  display: grid;
-  place-items: center;
   background-color: #A14A85;
   font-family: 'Raleway', sans-serif;
 }
@@ -27,6 +25,10 @@ body.green {
   background-color: #236343;
 }
 
+.container {
+  display: grid;
+  place-items: center;
+}
 /* color scheme picker */
 header {
   margin-top: 15px;
@@ -108,6 +110,7 @@ h1 {
   border: 2px solid #000000;
   font-size: 132px;
   font-weight: 200;
+  color:#000000;
   text-align: center;
   vertical-align: middle;
   line-height: 133px;
