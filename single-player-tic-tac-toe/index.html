@@ -42,6 +42,7 @@
     <meta name="twitter:card" content="summary" />
 
     <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="style.css" />
     
     <!--      -->
@@ -50,13 +51,33 @@
     <script src="script.js" defer></script>
   </head>
   <body class="pink">
-    
+    <!-- Header -->
+	<div id="header-wrapper">
+		<div id="header" class="container">
+
+			<!-- Logo -->
+				<div id="logo"><a href="../index.html"><img src="../images/logo.png"></a></div>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="../minesweeper/index.html">Beesweeper</a></li>
+						<li><a href="../snake-game/index.html">Snake</a></li>
+						<li class="break"><a href="../single-player-tic-tac-toe/index.html">Tic Tac Toe</a></li>
+						<li><a href="../rock-paper-scissors/index.html">Rock Paper Scissors</a></li>
+					</ul>
+				</nav>
+
+		</div>
+	</div>
+
+  <section class="container">
     <!-- color scheme picker -->
     <header>
       <div class="players">
         <div>Players:</div>
-        <div class="number" id="single">1</div>
-        <div class="number active" id="multi">2</div>
+        <div class="number active" id="single">1</div>
+        <div class="number" id="multi">2</div>
       </div>
       <div class="chooseColor">
         <div>Theme:</div>
@@ -97,7 +118,7 @@
     <section class="controls">
       <!--    Reset button    -->
       <div class="reset">Reset</div>
-<!--       <div id="winner"></div> -->
+    <!--       <div id="winner"></div> -->
     </section>
     <!-- PopUp -->
     <div class="popup invisible">
@@ -106,5 +127,7 @@
         <div class="playAgain reset">Play again</div>
       </div>
     </div>
+  </section>
+    
   </body>
 </html>

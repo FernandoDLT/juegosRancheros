@@ -8,9 +8,25 @@ body {
   color: aliceblue;
   font-family: system-ui;
 }
-
+.logos {
+  display: flex;
+}
+.tic {
+  flex: 2;
+}
+.home {
+  flex: 1.5;
+}
+/* #logo {
+  display: flex;
+  justify-content: center;
+} */
+#logo img,
+.game-logo img {
+  height: 100px;
+}
 .wrapper {
-  margin-top: 1.5em;
+  /* margin-top: 1.5em; */
 }
 h1 {
   color: aqua;
@@ -19,6 +35,7 @@ h1 {
 .choose {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 .btn {
   background: none;
