@@ -4,9 +4,10 @@
 
 body {
   margin: 0;
-  background-color: rgb(30, 30, 30);
+  background-image:linear-gradient(75deg,  #032222 15%, #000000 55%);
   color: aliceblue;
-  font-family: system-ui;
+ 
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .wrapper {
@@ -65,10 +66,10 @@ h1 {
 }
 
 .result-score.you {
-  color: rgb(3, 169, 114);
+  color: #fae20a ;
 }
 .result-score.com {
-  color: red;
+  color:  #fae20a ;
 }
 
 .result-sel {
@@ -97,4 +98,23 @@ h1 {
   font-weight: bold;
   font-size: 1.4rem;
   color: rgb(78, 78, 249);
+}
+
+#topmenu{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#title{
+  justify-self:center;
+  width:400px;
+  margin:20px;
+}
+
+#homebutton{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100px;
+ margin: 20px;;
 }
