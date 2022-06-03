@@ -53,12 +53,25 @@ section {
 }
 .head {
     position: relative;
-    /*background-color: #97e3c2;*/
-    background-color: #00c2cb;
+    /*background-color: #97e3c2;*/ 
 }
-.body {
+
+/* color changer */
+body.blue .head,
+body.blue .body{
     background-color: #00c2cb;
+} 
+
+body.yellow .head,
+body.yellow .body{
+  background-color: #fae20a;
 }
+
+body.white .head,
+body.white .body{
+  background-color: #ffffff;
+}
+
 .tail {
     position: relative;
     /*background-color: #f69c9e;*/
@@ -147,21 +160,50 @@ section {
 }
 
 /* Tail Right */
-.tail.right::after {
+body.blue .tail.right::after {
     border-right-color: #00c2cb;
 }
+body.yellow .tail.right::after {
+    border-right-color: #fae20a;
+}
+body.white .tail.right::after {
+    border-right-color: #ffffff;
+}
+
 /* Tail Left */
-.tail.left::after {
+body.blue .tail.left::after {
     border-left-color: #00c2cb;
 }
+body.yellow .tail.left::after {
+    border-left-color: #fae20a;
+}
+body.white .tail.left::after {
+    border-left-color: #ffffff;
+}
+
 /* Tail Up */
-.tail.up::after {
+body.blue .tail.up::after {
     border-top-color: #00c2cb;
 }
+body.yellow .tail.up::after {
+    border-top-color: #fae20a;
+}
+body.white .tail.up::after {
+    border-top-color: #ffffff;
+}
+
 /* Tail Down */
-.tail.down::after {
+body.blue .tail.down::after {
     border-bottom-color: #00c2cb;
 }
+body.yellow .tail.down::after {
+    border-bottom-color: #fae20a;
+}
+body.white .tail.down::after {
+    border-bottom-color: #ffffff;
+}
+
+
 
 /* Bend */
 .bend-upleft,
