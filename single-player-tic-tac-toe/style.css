@@ -353,3 +353,9 @@ body.green .block:hover {
 #forest-ext-shadow-host {
   border: none;
 }
+
+#title{
+  justify-self:center;
+  width:400px;
+  margin:0;
+}
