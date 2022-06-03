@@ -10,7 +10,6 @@
 
 
 
-
 body {
   /* background-color: #03989E;*/
   text-align: center;
@@ -54,7 +53,7 @@ body {
 
 #status, h3 {
   /* color: #5ce1e6; */
-  color: lightgrey;
+  color: #FAE20A;
 }
 
 p {
@@ -64,12 +63,14 @@ p {
   color: #fdf28c;;
 }
 
-button {
+#reset {
   background: #5ce1e6;
-  width: 80px;
+  width: 150px;
   height: 40px;
   border-radius: 8px;
   color:#111c1c;
+  font-size: 20px;
+  padding: 5px 15px;
 }
 
 
