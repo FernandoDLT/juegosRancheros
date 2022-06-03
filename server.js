@@ -53,7 +53,9 @@ const server = http.createServer((req, res) => {
         route(res, page, "image/jpeg");
       } else if (page.endsWith(".gif")) {
         route(res, page, "image/gif");
-      } else {
+      } else if (page.endsWith(".svg")) {
+        route(res, page, "image/svg+xml");
+      }else {
         figlet("404!!", function (err, data) {
           if (err) {
             console.log("Something went wrong...");

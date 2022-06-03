@@ -10,15 +10,14 @@
 
 
 
-
 body {
   /* background-color: #03989E;*/
   text-align: center;
-  background-image: url("images/header.svg");
-		background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg,   #032222 15%, #000000 55%);
-		background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg,   #032222 15%, #000000 55%);
-		background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg,   #032222 15%, #000000 55%);
-		background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg,  #032222 15%, #000000 55%);
+  background-image: url("../assets/css/images/header.svg");
+		background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/header.svg"), -moz-linear-gradient(75deg,   #032222 15%, #000000 55%);
+		background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/header.svg"), -webkit-linear-gradient(75deg,   #032222 15%, #000000 55%);
+		background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/header.svg"), -ms-linear-gradient(75deg,   #032222 15%, #000000 55%);
+		background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/header.svg"), linear-gradient(75deg,  #032222 15%, #000000 55%);
 		background-color: #000000;
 		background-size: 100% 620%;
 		background-size: 128px 128px, 100% 620%, auto;
@@ -54,7 +53,7 @@ body {
 
 #status, h3 {
   /* color: #5ce1e6; */
-  color: lightgrey;
+  color: #FAE20A;
 }
 
 p {
@@ -64,12 +63,14 @@ p {
   color: #fdf28c;;
 }
 
-button {
+#reset {
   background: #5ce1e6;
-  width: 80px;
+  width: 150px;
   height: 40px;
   border-radius: 8px;
   color:#111c1c;
+  font-size: 20px;
+  padding: 5px 15px;
 }
 
 
