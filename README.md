@@ -1,7 +1,7 @@
 # RETRO JUEGOS RANCHEROS
 A place to play and enjoy a variety of classic games
 
-**Link to project:** https://juegos-layoutdemo.netlify.app/
+**Link to project:** https://juegos-rancheros.netlify.app/
 
 ![alt tag](images/logo.png)
 
