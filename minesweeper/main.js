@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         // top-right
         if (i > 9 && !isRightEdge && squares[i+1-width].classList.contains('bee')) total++
         // right
-        if (i < 98 && !isRightEdge && squares[i+1].classList.contains('bee')) total++
+        if (i < 99 && !isRightEdge && squares[i+1].classList.contains('bee')) total++
         // bottom-right
         if (i < 89 && !isRightEdge && squares[i+1+width].classList.contains('bee')) total++
         // bottom-middle
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   }
 
   // Reset when clicked;
-  document.querySelector('button').addEventListener('click', () =>{
+  document.querySelector('#reset').addEventListener('click', () =>{
     let honey = 0;
     let isGameOver = false;
     document.querySelector('.grid').innerHTML = ''
