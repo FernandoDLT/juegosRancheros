@@ -2,14 +2,17 @@ html,body {
     margin: 0;
     padding: 0;
 }
+body{
+    background: linear-gradient(300deg,#000000 0%, #001a1e 55%);;
+}
 /* nav */
 #header-wrapper{
     z-index: 2;
     background-color: black;
 }
-#logo img,
+
 .game-logo img{
-    height:100px;
+    height: 125px;
 }
 /* game */
 .infoPanel{
@@ -28,8 +31,8 @@ section {
 .gameboard {
     display: flex;
     flex-wrap: wrap;
-    width: calc(100vh - 140px - 140px - 60px);
-    height: calc(100vh - 140px - 140px - 60px); 
+    width: calc(100vh - 140px - 140px - 80px);
+    height: calc(100vh - 140px - 140px - 80px); 
     border: 2px solid #CCC;
     background: #111c1c;
 }
@@ -246,6 +249,7 @@ section {
   .snakeContainer{
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .icon-left,
   .icon-right {
@@ -279,13 +283,31 @@ section {
 
 /* mobile compatability */
 @media all and (max-width: 500px){
+    .game-logo img{
+        height: 100px;
+    }
+
     .gameboard {
       width: 350px;
       height: 350px;
     }
-    .cell.tail::after {
-        border: 17px solid transparent;
-    }
+
+   .snake {
+    display: flex;
+    flex-wrap: wrap;
+    width: 160px;
+    height: 40px; 
+    /* margin-right: 25px; */
+}
+.snake .cell {
+    flex: 0 0 25%;
+    width: 25%;
+    height: 100%;
+    border: none;
+}
+.snake .tail::after {
+    border-width: calc(160px / 4 / 2 - 2px);
+}
 
     .head::before,
     .head::after {
