@@ -1,4 +1,52 @@
 console.log('SNAKE LOADED')
+
+document.querySelector(".icon-right").addEventListener('click', changeColorRight)
+document.querySelector(".icon-left").addEventListener('click', changeColorLeft)
+
+
+//change the color of the snake
+let colors =['blue', 'yellow', 'white']
+let colorIndex = 0
+
+ 
+function changeColorRight(){
+  for (let i = 0; i < colors.length; i++){
+	 console.log(colors[i])
+	 console.log(document.body.classList.contains(colors[i]))
+	if(document.body.classList.contains(colors[i])){
+	  colorIndex = i
+	  console.log(colorIndex)
+	  document.querySelector('body').classList.remove(colors[colorIndex])
+	  if(colors[colorIndex + 1]){
+		document.querySelector('body').classList.add(colors[colorIndex + 1] )
+	  }else{
+		document.querySelector('body').classList.add(colors[0])
+	  }
+	 break; 
+  }
+	
+  }
+}
+
+function changeColorLeft(){
+   for (let i = 0; i < colors.length; i++){
+	 console.log(colors[i])
+	 console.log(document.body.classList.contains(colors[i]))
+	if(document.body.classList.contains(colors[i])){
+	  colorIndex = i
+	  console.log(colorIndex)
+	  document.querySelector('body').classList.remove(colors[colorIndex])
+	  if(colors[colorIndex - 1]){
+		document.querySelector('body').classList.add(colors[colorIndex - 1] )
+	  }else{
+		document.querySelector('body').classList.add(colors[colors.length -1])
+	  }
+	 break; 
+  }
+	
+  }
+}
+
 document.querySelector('.startGame').addEventListener('click', startGame)
 function startGame(){
 	document.querySelector('.popup').classList.add('invisible')

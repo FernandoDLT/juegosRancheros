@@ -1,20 +1,21 @@
 * {
   box-sizing: border-box;
 }
-
+html{
+  background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+  background-size: cover;
+  min-height: 100%;
+}
 body {
   margin: 0;
-  background-image: url("images/header.svg");
-  background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg,   #032222 15%, #000000 55%);
-  background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg,   #032222 15%, #000000 55%);
-  background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg,   #032222 15%, #000000 55%);
-  background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg,  #032222 15%, #000000 55%);
-  background-color: #000000;
-  background-size: 100% 620%;
-  background-size: 128px 128px, 100% 620%, auto;
-  background-repeat: repeat, no-repeat, no-repeat;
-  color: aliceblue;
   font-family: "Titillium Web", sans-serif;
+  background-color: transparent;
+}
+.game-logo{
+  text-align: center;
+}
+.game-logo img{
+  height: 125px;
 }
 .logos {
   display: flex;
@@ -29,8 +30,7 @@ body {
   display: flex;
   justify-content: center;
 } */
-#logo img,
-.game-logo img {
+#logo img {
   height: 100px;
 }
 h1 {

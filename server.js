@@ -54,7 +54,9 @@ const server = http.createServer((req, res) => {
       } else if (page.endsWith(".gif")) {
         route(res, page, "image/gif");
       } else if (page.endsWith(".svg")) {
-        route(res, page, "image/svg+xml");
+        route(res, page, "image/svg+xml"); 
+      } else if (page.endsWith(".ico")) {
+        route(res, page, "image/x-icon");
       }else {
         figlet("404!!", function (err, data) {
           if (err) {
@@ -72,8 +74,10 @@ const server = http.createServer((req, res) => {
 function route(res, page, contentType) {
   let destination = page.replace("/", ""); // Remove first slash
   fs.readFile(destination, function (err, data) {
-    res.writeHead(200, { "Content-Type": contentType });
-    res.write(data);
+    if (data != undefined) {
+      res.writeHead(200, { "Content-Type": contentType });
+      res.write(data);
+    }
     res.end();
   });
 }
