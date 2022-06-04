@@ -74,8 +74,10 @@ const server = http.createServer((req, res) => {
 function route(res, page, contentType) {
   let destination = page.replace("/", ""); // Remove first slash
   fs.readFile(destination, function (err, data) {
-    res.writeHead(200, { "Content-Type": contentType });
-    res.write(data);
+    if (data != undefined) {
+      res.writeHead(200, { "Content-Type": contentType });
+      res.write(data);
+    }
     res.end();
   });
 }
