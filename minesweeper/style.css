@@ -3,31 +3,22 @@
   z-index: 2;
   background-color: black;
 }
-#logo img,
+
 .game-logo img{
-  height:100px;
+  height: 125px;
 }
 
-
-
 body {
-  /* background-color: #03989E;*/
   text-align: center;
-  background-image: url("../assets/css/images/header.svg");
-		background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/header.svg"), -moz-linear-gradient(75deg,   #032222 15%, #000000 55%);
-		background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/header.svg"), -webkit-linear-gradient(75deg,   #032222 15%, #000000 55%);
-		background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/header.svg"), -ms-linear-gradient(75deg,   #032222 15%, #000000 55%);
-		background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/header.svg"), linear-gradient(75deg,  #032222 15%, #000000 55%);
-		background-color: #000000;
-		background-size: 100% 620%;
-		background-size: 128px 128px, 100% 620%, auto;
-		background-repeat: repeat, no-repeat, no-repeat;
-    font-family: 'Titillium Web', sans-serif;
+  background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .grid {
-  height: 400px;
-  width: 400px;
+  width: calc(100vh - 140px - 140px - 60px);
+  height: calc(100vh - 140px - 140px - 60px); 
+  max-height: 400px;
+  max-width: 400px;
   display: flex;
   flex-wrap: wrap;
   background-color: #fdf28c;
@@ -35,8 +26,8 @@ body {
 }
 
 .grid div {
-  height: 38px;
-  width: 38px;
+  height: 10%;
+  width: 10%;
   border: 1px solid rgb(255, 162, 48);
   text-align: center;
   font-size: 28px;
@@ -56,8 +47,12 @@ body {
   color: #FAE20A;
 }
 
+.honeypots{
+  margin-bottom: 10px;
+}
+
 p {
-  width: 400px;
+  width: calc(100vh - 140px - 140px - 60px);
   margin: auto;
   margin-top: 20px;
   color: #fdf28c;;
@@ -65,16 +60,26 @@ p {
 
 #reset {
   background: #5ce1e6;
-  width: 150px;
+  width: fit-content;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 5px;
   color:#111c1c;
   font-size: 20px;
   padding: 5px 15px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+}
+
+#reset:hover{
+  transform: scale(1.2)
 }
 
 
-#topmenu{
+/* #topmenu{
   display: flex;
   justify-content: center;
   width: 100%;
@@ -91,4 +96,4 @@ p {
   left: 0;
   width:100px;
  margin: 20px;;
-}
+} */

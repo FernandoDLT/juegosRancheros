@@ -54,7 +54,9 @@ const server = http.createServer((req, res) => {
       } else if (page.endsWith(".gif")) {
         route(res, page, "image/gif");
       } else if (page.endsWith(".svg")) {
-        route(res, page, "image/svg+xml");
+        route(res, page, "image/svg+xml"); 
+      } else if (page.endsWith(".ico")) {
+        route(res, page, "image/x-icon");
       }else {
         figlet("404!!", function (err, data) {
           if (err) {
