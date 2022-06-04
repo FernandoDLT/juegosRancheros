@@ -3,7 +3,7 @@ html,body {
     padding: 0;
 }
 body{
-    background: linear-gradient(300deg,#000000 0%, #001a1e 55%);;
+    background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
 }
 /* nav */
 #header-wrapper{
