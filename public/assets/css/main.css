@@ -88,7 +88,8 @@ input, select, textarea {
 
 	body {
 		background: #000000;
-		font-family: 'Source Sans Pro', sans-serif;
+		/* font-family: 'Source Sans Pro', sans-serif; */
+		font-family: 'Titillium Web', sans-serif;
 		font-weight: 300;
 		color: #ffffff;
 		line-height: 1.75em;
@@ -1760,9 +1761,10 @@ input, select, textarea {
 		border: 0;
 	}
 
-		.image img {
-			display: block;
-			width: 100%;
+	.image img {
+		display: block;
+		width: 100%;
+		
 		}
 
 		.image.fit {
@@ -2102,10 +2104,10 @@ input, select, textarea {
 		position: relative;
 		padding: 4em 0 2em 0;
 		background-image: url("images/header.svg");
-		background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg,   #111c1c 15%, #000000 55%);
-		background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg,   #111c1c 15%, #000000 55%);
-		background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg,   #111c1c 15%, #000000 55%);
-		background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg,  #111c1c 15%, #000000 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg,   #032222 15%, #000000 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg,   #032222 15%, #000000 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg,   #032222 15%, #000000 55%);
+		background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg,  #032222 15%, #000000 55%);
 		background-color: #000000;
 		background-size: 100% 620%;
 		background-size: 128px 128px, 100% 620%, auto;
@@ -2149,6 +2151,7 @@ input, select, textarea {
 
 	#logo img{
 		width:100%;
+		margin-top: 1em;
 	}
 		#logo a {
 			display: block;
@@ -2172,6 +2175,8 @@ input, select, textarea {
 		width: 100%;
 		height: 4em;
 		line-height: 4em;
+		display: flex;
+		justify-content: space-around;
 	}
 
 		#nav > ul {
@@ -2188,7 +2193,7 @@ input, select, textarea {
 				}
 
 				#nav > ul > li > span, #nav > ul > li > a {
-					color: #fff;
+					color: #fae20a;
 					text-decoration: none;
 					outline: 0;
 					border: 0;
@@ -2200,6 +2205,9 @@ input, select, textarea {
 					-o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 					-ms-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 					transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+					font-size: 1em;
+					font-weight: 700;
+
 				}
 
 				#nav > ul > li.active > span, #nav > ul > li.active > a {
@@ -2441,6 +2449,10 @@ input, select, textarea {
 
 	}
 
+	#nav{
+		font-size: 0.9em;
+	}
+
 /* Narrow */
 
 	@media screen and (max-width: 1080px) {
@@ -2491,6 +2503,7 @@ input, select, textarea {
 				margin: 0.5em 0 0 0;
 				line-height: 2.25em;
 				height: 2.25em;
+				
 			}
 
 				#nav > ul > li {
@@ -2868,10 +2881,10 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				height: 50vh;
-				z-index: 10002;
+				z-index: 10003;
 				box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
 				font-size: 1em;
-				background-color: #003f42;
+				background-color:   #00c2cbc4;
 				background-size: 128px 128px, 100% 100%, 100% 100%;
 			}
 
@@ -2887,7 +2900,7 @@ input, select, textarea {
 				}
 
 					#navPanel .link.depth-0 {
-						color: #fff;
+						color: #fae20a;
 						font-weight: 400;
 					}
 

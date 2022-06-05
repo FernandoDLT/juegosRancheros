@@ -5,35 +5,29 @@
   margin: 0;
   padding: 0;
 }
-
+.game-logo{
+  height: 150px;
+}
 body {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  background-color: #A14A85;
-  font-family: 'Raleway', sans-serif;
+  /* width: 100vw;
+  height: 100vh; */
+  background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+  
 }
-
-body.pink {
-  background-color: #A14A85;
+.containerx{
+  text-align: center;
 }
-
-body.blue {
-  background-color: #257CBA;
-}
-
-body.green {
-  background-color: #236343;
+.containerx .board {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* color scheme picker */
-header {
-  margin-top: 15px;
+.settings {
   height: 30px;
 }
 
-header, 
+.settings, 
 .players, 
 .chooseColor {
   display: flex;
@@ -55,7 +49,7 @@ header,
   height: 25px;
   width: 30px;
   margin: 5px;
-  border: 2px solid #000000;
+  border: 1px solid white;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
@@ -85,61 +79,61 @@ header,
 }
 
 #blue {
-  background: #257CBA /*#7DC7FB; */
+  background: #5ce1e6; /*#7DC7FB; */
 }
 
 #pink {
-  background: #A14A85/*#E6AED4*/
+  background: #fae20a;/*#E6AED4*/
 }
 
-#green {
-  background: #236343 /*#77E6B8;*/ 
-}
+/* #green {
+  background: #236343 #77E6B8; 
+} */
 
-h1 {
-  margin-top: 15px;
-  font-size: 2.5rem;
-}
 
 .board {
   margin-top: 25px;
-/*   width: 399px;
-  height: 399px; */
-  border: 2px solid #000000;
+  width: 400px;
+  height: 400px;
+  gap: 2px;
   font-size: 132px;
+  font-family: 'Raleway', sans-serif;
   font-weight: 200;
+  color:#000000;
   text-align: center;
   vertical-align: middle;
   line-height: 133px;
   user-select: none;
   position: relative;
-  display: grid;
-  grid-template-areas:
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* grid-template-areas:
     "one   two   three"
     "four  five  six"
-    "seven eight nine"
+    "seven eight nine" */
 }
 
 .block {
-  height: 133px;
-  width: 133px;
-  border: 2px solid #000000;
+  height: 33%;
+  width: 33%;
+  border: 2px solid #ffffff;
   background-color: #ffffff;
   cursor: pointer;
 }
 
 /* add curved edges to theme */
 body.pink .curvedEdge{
-  border-color: #A14A85;
+  border-color: #000000;
 }
 
 body.blue .curvedEdge{
-  border-color: #257CBA;
+  border-color: #000000;
 }
 
-body.green .curvedEdge{
+/* body.green .curvedEdge{
   border-color: #236343;
-}
+} */
 
 .block.curvedEdge {
   border-radius: 10px;
@@ -157,15 +151,11 @@ body.green .curvedEdge{
 }
 
 body.pink .strike {
-  border-color: #612D50;
+  border-color: #8F8130;
 }
 
 body.blue .strike {
-  border-color: #134161;
-}
-
-body.green .strike {
-  border-color: #18452E;
+  border-color: #005C61;
 }
 
 
@@ -223,62 +213,24 @@ body.green .strike {
   transform: rotate(-45deg);
 }
 
-#one {
-  grid-area: one;
-}
-
-#two {
-  grid-area: two;
-}
-
-#three {
-  grid-area: three;
-}
-
-#four {
-  grid-area: four;
-}
-
-#five {
-  grid-area: five;
-}
-
-#six {
-  grid-area: six;
-}
-
-#seven {
-  grid-area: seven;
-}
-
-#eight {
-  grid-area: eight;
-}
-
-#nine {
-  grid-area: nine;
-}
-
 .block:hover {
   background: #d3d3d3;
 }
 
 body.pink .block:hover {
-  background: #E6AED4;
+  background: #fae20a;
 }
 
 body.blue .block:hover {
-  background:#7DC7FB;
-}
-
-body.green .block:hover {
-  background:rgba(255,255,255,0.5);
+  background:#5ce1e6;
 }
 
 .controls {
-  width: 399px;
+  width: 100%;
   height: 133px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .reset {
@@ -288,14 +240,14 @@ body.green .block:hover {
   width: auto;
   height: fit-content;
   border: none;
-  background: #000000;
-  color: #ffffff;
+  background: white;
+  color: black;
   border-radius: 2.5rem;
 /*   margin-block: 2.5rem; */
   cursor: pointer;
   border: 1px solid transparent;
   transition: transform 0.2s;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .reset:hover {
@@ -309,7 +261,7 @@ body.green .block:hover {
   margin: 0 auto;
   height: fit-content;
   border: none;
-  margin-block: 2.5rem;
+  /* margin-block: 2.5rem; */
   font-size: 2.5rem;
   font-weight: 700;
 }
@@ -323,7 +275,7 @@ body.green .block:hover {
   bottom: 0;
   left: 0;
   right:0;
-  background: rgba(255,255,255,0.5);
+  background: rgba(0,0,0,0.5);;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -332,7 +284,7 @@ body.green .block:hover {
 .popupText {
   width: 100%;
   max-width: 300px;
-  background: #eeeeee;
+  background: #111c1c;
   padding: 20px;
   border-radius: 15px;
   text-align: center;
@@ -342,9 +294,16 @@ body.green .block:hover {
 .popupText .winnerText{
   font-size: 50px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-#forest-ext-shadow-host {
-  border: none;
+.playAgain.reset{
+  width: fit-content;
+}
+
+/* mobile compatability */
+@media all and (max-width: 500px){
+  img.game-logo {
+      height: 100px;
+  }
 }
