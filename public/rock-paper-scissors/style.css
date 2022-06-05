@@ -1,16 +1,37 @@
 * {
   box-sizing: border-box;
 }
-
+html{
+  background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+  background-size: cover;
+  min-height: 100%;
+}
 body {
   margin: 0;
-  background-color: rgb(30, 30, 30);
-  color: aliceblue;
-  font-family: system-ui;
+  font-family: "Titillium Web", sans-serif;
+  background-color: transparent;
 }
-
-.wrapper {
-  margin-top: 1.5em;
+.game-logo{
+  text-align: center;
+}
+.game-logo img{
+  height: 125px;
+}
+.logos {
+  display: flex;
+}
+.tic {
+  flex: 2;
+}
+.home {
+  flex: 1.5;
+}
+/* #logo {
+  display: flex;
+  justify-content: center;
+} */
+#logo img {
+  height: 100px;
 }
 h1 {
   color: aqua;
@@ -19,6 +40,7 @@ h1 {
 .choose {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 .btn {
   background: none;
@@ -65,10 +87,10 @@ h1 {
 }
 
 .result-score.you {
-  color: rgb(3, 169, 114);
+  color: #fae20a;
 }
 .result-score.com {
-  color: red;
+  color: #fae20a;
 }
 
 .result-sel {
@@ -97,4 +119,23 @@ h1 {
   font-weight: bold;
   font-size: 1.4rem;
   color: rgb(78, 78, 249);
+}
+
+#topmenu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#title {
+  justify-self: center;
+  width: 400px;
+  margin: 20px;
+}
+
+#homebutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  margin: 20px;
 }

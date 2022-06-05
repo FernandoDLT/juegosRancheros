@@ -1,4 +1,52 @@
 console.log('SNAKE LOADED')
+
+document.querySelector(".icon-right").addEventListener('click', changeColorRight)
+document.querySelector(".icon-left").addEventListener('click', changeColorLeft)
+
+
+//change the color of the snake
+let colors =['blue', 'yellow', 'white']
+let colorIndex = 0
+
+ 
+function changeColorRight(){
+  for (let i = 0; i < colors.length; i++){
+	 console.log(colors[i])
+	 console.log(document.body.classList.contains(colors[i]))
+	if(document.body.classList.contains(colors[i])){
+	  colorIndex = i
+	  console.log(colorIndex)
+	  document.querySelector('body').classList.remove(colors[colorIndex])
+	  if(colors[colorIndex + 1]){
+		document.querySelector('body').classList.add(colors[colorIndex + 1] )
+	  }else{
+		document.querySelector('body').classList.add(colors[0])
+	  }
+	 break; 
+  }
+	
+  }
+}
+
+function changeColorLeft(){
+   for (let i = 0; i < colors.length; i++){
+	 console.log(colors[i])
+	 console.log(document.body.classList.contains(colors[i]))
+	if(document.body.classList.contains(colors[i])){
+	  colorIndex = i
+	  console.log(colorIndex)
+	  document.querySelector('body').classList.remove(colors[colorIndex])
+	  if(colors[colorIndex - 1]){
+		document.querySelector('body').classList.add(colors[colorIndex - 1] )
+	  }else{
+		document.querySelector('body').classList.add(colors[colors.length -1])
+	  }
+	 break; 
+  }
+	
+  }
+}
+
 document.querySelector('.startGame').addEventListener('click', startGame)
 function startGame(){
 	document.querySelector('.popup').classList.add('invisible')
@@ -38,7 +86,7 @@ function startGame(){
 			 event.preventDefault();
 		}, true);
 
-	document.querySelectorAll('.cell')[Math.floor(Math.random()*96)+3].classList.add('apple')
+	document.querySelectorAll('.gameboard .cell')[Math.floor(Math.random()*96)+3].classList.add('apple')
 }
 
 class Snake {
@@ -108,8 +156,8 @@ class Snake {
 
 		// Check for apple & eat apple
 		let ateApple = false;
-		if (document.querySelectorAll('.cell')[head].classList.contains('apple')){
-			document.querySelectorAll('.cell')[head].classList.remove('apple')
+		if (document.querySelectorAll('.gameboard .cell')[head].classList.contains('apple')){
+			document.querySelectorAll('.gameboard .cell')[head].classList.remove('apple')
 			ateApple = true;
 			//remove old tail
 			this.segments[this.segments.length-1].type = 'body'
@@ -168,7 +216,7 @@ class Snake {
 
 	drawSnake() {
 		// Remove all classes from all cells
-		document.querySelectorAll('.cell').forEach((el) => {
+		document.querySelectorAll('.gameboard .cell').forEach((el) => {
 			if(!el.classList.contains('apple')){
 				el.className = 'cell'
 			}
@@ -176,7 +224,7 @@ class Snake {
 
 		// Add snake classes
 		for (let i = 0; i < this.segments.length; i++) {
-			let segment = document.querySelectorAll('.cell')[this.segments[i].cell]
+			let segment = document.querySelectorAll('.gameboard .cell')[this.segments[i].cell]
 			segment.classList.add(this.segments[i].type, this.segments[i].direction)
 			if (this.segments[i].type == 'body') {
 				let bendClass = 'bend-'
@@ -232,7 +280,7 @@ class Snake {
 	}
 
 	drawApple() {
-		let cells = document.querySelectorAll('.cell')
+		let cells = document.querySelectorAll('.gameboard .cell')
 		let validApple = false
 		let appleIndex = Math.floor(Math.random()*cells.length)
 		while (!validApple){
@@ -257,7 +305,7 @@ class Snake {
 		document.querySelector('.gameOver').innerText = 'Game Over!'
 		document.querySelector('.startGame').innerText = 'Play Again'
 		document.querySelector('.popup').classList.remove('invisible')
-		document.querySelectorAll('.cell').forEach((el) => {
+		document.querySelectorAll('.gameboard .cell').forEach((el) => {
 			el.className = 'cell'
 		})
 		clearInterval(this.gameLoop)

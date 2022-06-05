@@ -1,9 +1,20 @@
 html,body {
     margin: 0;
     padding: 0;
-    font-family: 'Supermercado One', cursive;
+}
+body{
+    background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+}
+/* nav */
+#header-wrapper{
+    z-index: 2;
+    background-color: black;
 }
 
+.game-logo img{
+    height: 125px;
+}
+/* game */
 .infoPanel{
     display:flex;
     margin: 10px 5px;
@@ -20,9 +31,10 @@ section {
 .gameboard {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
-    height: 500px; 
+    width: calc(100vh - 140px - 140px - 80px);
+    height: calc(100vh - 140px - 140px - 80px); 
     border: 2px solid #CCC;
+    background: #111c1c;
 }
 .cell {
     flex: 0 0 10%;
@@ -41,12 +53,25 @@ section {
 }
 .head {
     position: relative;
-    /*background-color: #97e3c2;*/
-    background-color: #99c3ec;
+    /*background-color: #97e3c2;*/ 
 }
-.body {
-    background-color: #99c3ec;
+
+/* color changer */
+body.blue .head,
+body.blue .body{
+    background-color: #00c2cb;
+} 
+
+body.yellow .head,
+body.yellow .body{
+  background-color: #fae20a;
 }
+
+body.white .head,
+body.white .body{
+  background-color: #ffffff;
+}
+
 .tail {
     position: relative;
     /*background-color: #f69c9e;*/
@@ -131,25 +156,54 @@ section {
     bottom: 0;
     content: "";
     display: block;
-    border: 24px solid transparent;
+    border: calc((100vh - 140px - 140px - 60px) / 10 / 2 - 2px) solid transparent;
 }
 
 /* Tail Right */
-.tail.right::after {
-    border-right-color: #99c3ec;
+body.blue .tail.right::after {
+    border-right-color: #00c2cb;
 }
+body.yellow .tail.right::after {
+    border-right-color: #fae20a;
+}
+body.white .tail.right::after {
+    border-right-color: #ffffff;
+}
+
 /* Tail Left */
-.tail.left::after {
-    border-left-color: #99c3ec;
+body.blue .tail.left::after {
+    border-left-color: #00c2cb;
 }
+body.yellow .tail.left::after {
+    border-left-color: #fae20a;
+}
+body.white .tail.left::after {
+    border-left-color: #ffffff;
+}
+
 /* Tail Up */
-.tail.up::after {
-    border-top-color: #99c3ec;
+body.blue .tail.up::after {
+    border-top-color: #00c2cb;
 }
+body.yellow .tail.up::after {
+    border-top-color: #fae20a;
+}
+body.white .tail.up::after {
+    border-top-color: #ffffff;
+}
+
 /* Tail Down */
-.tail.down::after {
-    border-bottom-color: #99c3ec;
+body.blue .tail.down::after {
+    border-bottom-color: #00c2cb;
 }
+body.yellow .tail.down::after {
+    border-bottom-color: #fae20a;
+}
+body.white .tail.down::after {
+    border-bottom-color: #ffffff;
+}
+
+
 
 /* Bend */
 .bend-upleft,
@@ -170,34 +224,14 @@ section {
 }
 
 /* apple */
-.apple {
-    background: red;
-    border-radius: 50%;
-    position: relative;
-}
-
-.apple::after{
-    position: absolute;
-    content:"";
-    width: 20px;
-    height: 20px;
-    border-radius: 50% 0 50% 0;
-    background: green;
-    top: 1px;
-    right: 1px;
+.apple{
+    background-image: url("../snake-game/egg-two.png");
+    background-size: contain;
 }
 
 .buttons{
     display: none;
 }
-/* button.left {
-}
-button.down {
-}
-button.right {
-} */
-/* start menu */
-
 
 /* Start menu pop up */
 .popup.invisible {
@@ -210,7 +244,7 @@ button.right {
     bottom: 0;
     left: 0;
     right:0;
-    background: rgba(255,255,255,0.5);
+    background: rgba(0,0,0,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,7 +253,7 @@ button.right {
   .popupText {
     width: 90%;
     max-width: 400px;
-    background: #eeeeee;
+    background: #111c1c;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -230,9 +264,10 @@ button.right {
     font-size: 45px;
     padding-bottom: 15px;
   }
-  .startGame,
-  .homeButton {
+  .startGame {
       padding: 10px;
+      background: white;
+      color: black;
       border: 1px solid black;
       border-radius: 5px;
       max-width: fit-content;
@@ -241,14 +276,6 @@ button.right {
       transition: transform 0.2s;
       cursor: pointer;
   }
-  .homeButton {
-    font-size: 16px;
-    text-align: left;
-    margin-left: 10px;
-    color: black;
-    text-decoration: none;
-    z-index: 2;
-}
 
   .startGame:hover,
   .homeButton:hover,
@@ -257,9 +284,14 @@ button.right {
      transform: scale(1.2); 
   }
 
+  .choose-snake {
+      padding-bottom: 10px;
+  }
+
   .snakeContainer{
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .icon-left,
   .icon-right {
@@ -269,52 +301,55 @@ button.right {
       cursor: pointer;
   }
 
-   
-  .snake {
-    margin-top: 10px;
-    margin-left: 15px;
-    width: 150px;
-    height: 50px;
-    background-color: #99c3ec;
-    text-align: center;
-    border-radius: 0 10px 10px 0;
-    position: relative;
+  .icon-right {
+      margin-left: 50px;
   }
 
-  .snake::before,
-  .snake::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 4px;
-    height: 4px;
-    border-radius: 2px;
-    background: black;
-    right: 5px;
+.snake {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 50px; 
+    /* margin-right: 25px; */
+}
+.snake .cell {
+    flex: 0 0 25%;
+    width: 25%;
+    height: 100%;
+    border: none;
+}
+.snake .tail::after {
+    border-width: calc(200px / 4 / 2 - 2px);
 }
 
-.snake::before{
-    top: 10px;
-}
-
-.snake::after{
-    bottom: 10px;
-}
-
-.snake .tail{
-    position:absolute;
-    left: -48px;
-}
 
 /* mobile compatability */
 @media all and (max-width: 500px){
+    .game-logo img{
+        height: 100px;
+    }
+
     .gameboard {
       width: 350px;
       height: 350px;
     }
-    .cell.tail::after {
-        border: 17px solid transparent;
-    }
+
+   .snake {
+    display: flex;
+    flex-wrap: wrap;
+    width: 160px;
+    height: 40px; 
+    /* margin-right: 25px; */
+}
+.snake .cell {
+    flex: 0 0 25%;
+    width: 25%;
+    height: 100%;
+    border: none;
+}
+.snake .tail::after {
+    border-width: calc(160px / 4 / 2 - 2px);
+}
 
     .head::before,
     .head::after {
@@ -328,23 +363,19 @@ button.right {
     }
     /* Tail Right */
     .tail.right::after {
-        border-right-color: #99c3ec;
+        border-right-color: #00c2cb;
     }
     /* Tail Left */
     .tail.left::after {
-        border-left-color: #99c3ec;
+        border-left-color: #00c2cb;
     }
     /* Tail Up */
     .tail.up::after {
-        border-top-color: #99c3ec;
+        border-top-color: #00c2cb;
     }
     /* Tail Down */
     .tail.down::after {
-        border-bottom-color: #99c3ec;
-    }
-    .apple::after {
-        width: 14px;
-        height: 14px;
+        border-bottom-color: #00c2cb;
     }
 
     .buttons {
@@ -352,13 +383,20 @@ button.right {
         flex-wrap: wrap;
         width: 150px;
         margin-top: 20px;
+        gap: 1px;
     }
     .buttons button {
-        display: block;
-        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 4px;
+        padding: 0;
+        width: calc(100% / 3 - 1px);
         height: 50px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 400;
         font-size: 14px;
-        font-family: 'Supermercado One', cursive;
         text-align: center;
     }
     button.up {
