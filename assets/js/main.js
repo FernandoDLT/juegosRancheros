@@ -47,7 +47,7 @@
 			$(
 				'<div id="navPanel">' +
 					'<nav>' +
-						'<a href="index.html" class="link depth-0"><img class="game-logo home-logo" src="../images/home.png" alt="home"></a>' +
+						'<a href="../index.html" class="link depth-0"><img class="game-logo home-logo" src="../images/home.png" alt="home"></a>' +
 						$('#nav').navList() +
 					'</nav>' +
 				'</div>'
