@@ -8,6 +8,7 @@
 
 <head>
    <title>Retro Juegos Rancheros</title>
+   <link rel="icon" type="image/x-icon" href="favicon.ico?v=1.1">
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
    <link rel="stylesheet" href="assets/css/main.css" />
@@ -15,7 +16,6 @@
 		Play with a friend or challenge our 'RancheroBots' in a duel to the finish for the top spot on the Leaderboard!
 		" />
    <!--Imported Font-->
-
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link
@@ -29,16 +29,16 @@
       <!-- Header -->
       <div id="header-wrapper">
          <div id="header" class="container">
-            <!-- Logo -->
 
+            <!-- Logo -->
+            <h1 id="logo"><a href="/"><img src="images/logo.png"></a></h1>
 
             <!-- Nav -->
             <nav id="nav">
                <ul>
-                  <li><a href="#">BEESWEEPER</a></li>
+                  <li><a href="minesweeper/index.html">BEESWEEPER</a></li>
                   <li><a href="snake-game/index.html">SNAKE</a></li>
                </ul>
-               <h1 id="logo"><a href="index.html"><img src="images/logo.png"></a></h1>
                <ul>
                   <li class="break"><a href="single-player-tic-tac-toe/index.html">TIC TAC TOE</a></li>
                   <li><a href="rock-paper-scissors/index.html">ROCK PAPER SCISSORS</a></li>
@@ -55,11 +55,12 @@
             <!-- Content -->
             <article id="content">
                <header>
+                  <h1>Welcome <%= name %></h1>
+                  <a href="#" class="image featured"><img src="images/banner.png" alt="" /></a>
                   <p>Welcome to Retro Juegos Rancheros, amig@! Where you can test your skills and abilities in trying to
                      conquer the variety of video games available to you with a click of your mouse, like Mindsweeper
                      and Tic -Tac-Toe.
-                     Play with a friend or challenge our 'RancheroBots' in a duel to the finish for the top spot on the
-                     Leaderboard!
+                     Play with a friend or challenge our 'RancheroBots' in a duel to the finish!
                      Good luck and may The ‘Juegos’ be with you!</p>
                </header>
             </article>
@@ -82,7 +83,7 @@
                </section>
                <section class="col-6 col-12-narrower feature">
                   <div class="image-wrapper">
-                     <a href="#" class="image featured"><img src="images/bee.png" alt="" /></a>
+                     <a href="minesweeper/index.html" class="image featured"><img src="images/bee.png" alt="" /></a>
                   </div>
                   <header>
 
@@ -105,10 +106,8 @@
 
                   </header>
                   <p>Each object wins against one shape and loses to another. For instance, rock "crushes" scissors but
-                     is "covered" by
-                     paper, paper "covers" rock but is "cut" by scissors, and scissors is "crushed" by rock but "cuts"
-                     paper. The player
-                     who picks the stronger of the two objects is the winner.
+                     is "covered" by paper, paper "covers" rock but is "cut" by scissors, and scissors is "crushed" by
+                     rock but "cuts" paper. The player who picks the stronger of the two objects is the winner.
                   </p>
                   <ul class="actions">
                      <li><a href="rock-paper-scissors/index.html" class="button">PLAY</a></li>
@@ -138,8 +137,13 @@
       <div id="footer-wrapper">
          <div id="copyright" class="container">
             <ul class="menu">
-               <li>&copy; Untitled. All rights reserved.</li>
-               <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+               <li>&copy; </li>
+               <li><a target="_blank" href="https://github.com/adilth">Adil Tahiri</a></li>
+               <li><a target="_blank" href="https://github.com/dionwdev">Dion Wilson</a></li>
+               <li><a target="_blank" href="https://github.com/ferndiddy">Fernando De La Torre</a></li>
+               <li><a target="_blank" href="https://github.com/bewimsical">Kathleen D Wims</a></li>
+               <li><a target="_blank" href="https://github.com/Greek4Tech">Leonidas Gkimisis</a></li>
+               <li><a target="_blank" href="https://github.com/Eagle747">Sigrid van der Walt</a></li>
             </ul>
          </div>
       </div>

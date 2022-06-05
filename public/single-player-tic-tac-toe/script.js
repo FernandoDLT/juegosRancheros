@@ -13,7 +13,7 @@ let winner = document.querySelector('.winnerText')
 let singlePlayer = document.querySelector('#single')
 let multiPlayer = document.querySelector('#multi')
 let xTurn = true;
-let numberOfPlayers = 2
+let numberOfPlayers = 1
 let winCases = {
     win123:[pos1, pos2, pos3],
     win456:[pos4, pos5, pos6],
@@ -177,7 +177,7 @@ function reset() {
 
 
 // color picker
-let colors = ['blue', 'pink', 'green']
+let colors = ['blue', 'pink']
 colors.forEach((color)=>{
   let element = document.getElementById(color)
   element.addEventListener('click', () => {makeColor(element)})
@@ -185,30 +185,30 @@ colors.forEach((color)=>{
 
 function makeColor(e){
   let color = e.getAttribute('id')
-  document.querySelector('body').classList.remove('blue', 'pink', 'green')//add loop on colors to remove IDs 
+  document.querySelector('body').classList.remove('blue', 'pink')//add loop on colors to remove IDs 
   document.querySelector('body').classList.add(color)
 }
 
 //shape picker
-document.querySelector('.shape').addEventListener('click', () => {
-  document.querySelector('.shape').classList.contains('curved') ? curveEdges() : squareEdges()})
+// document.querySelector('.shape').addEventListener('click', () => {
+//   document.querySelector('.shape').classList.contains('curved') ? curveEdges() : squareEdges()})
 
-function curveEdges(){
-  document.querySelectorAll('.block').forEach(block => {
-    block.classList.add('curvedEdge')
-  })
-  document.querySelector('.board').classList.add('curvedEdge')
-  document.querySelector('.shape').classList.remove('curved')
+// function curveEdges(){
+//   document.querySelectorAll('.block').forEach(block => {
+//     block.classList.add('curvedEdge')
+//   })
+//   document.querySelector('.board').classList.add('curvedEdge')
+//   document.querySelector('.shape').classList.remove('curved')
   
-}
-//change board shape
-function squareEdges(){
-  document.querySelectorAll('.block').forEach(block => {
-    block.classList.remove('curvedEdge')
-  })
-  document.querySelector('.board').classList.remove('curvedEdge')
-  document.querySelector('.shape').classList.add('curved')
-}
+// }
+// //change board shape
+// function squareEdges(){
+//   document.querySelectorAll('.block').forEach(block => {
+//     block.classList.remove('curvedEdge')
+//   })
+//   document.querySelector('.board').classList.remove('curvedEdge')
+//   document.querySelector('.shape').classList.add('curved')
+// }
 
 // Reset game at site load
 reset()
