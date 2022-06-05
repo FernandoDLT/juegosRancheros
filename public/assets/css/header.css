@@ -2,6 +2,9 @@
 #nav > ul {
     padding: 0;
 }
+#nav > ul > li > a {
+  transition: none;
+}
 
 #nav > ul > li.break-left{
     margin-left: 175px;

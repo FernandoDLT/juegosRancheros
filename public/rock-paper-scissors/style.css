@@ -11,8 +11,8 @@ body {
   font-family: "Titillium Web", sans-serif;
   background-color: transparent;
 }
-.game-logo{
-  text-align: center;
+.directions{
+  margin-top: 50px;
 }
 .game-logo img{
   height: 125px;
@@ -31,7 +31,7 @@ body {
   justify-content: center;
 } */
 #logo img {
-  height: 100px;
+  /* height: 100px; */
 }
 h1 {
   color: aqua;
