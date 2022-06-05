@@ -1,5 +1,5 @@
 const http = require("http");
-const cors = require("cors")
+const cors = require("cors");
 const fs = require("fs");
 const url = require("url");
 const querystring = require("querystring");
