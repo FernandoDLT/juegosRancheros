@@ -1,0 +1,100 @@
+/* nav */
+#header-wrapper{
+  z-index: 2;
+  background-color: black;
+}
+
+.game-logo img{
+  height: 125px;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.grid {
+  width: calc(100vh - 140px - 140px - 60px);
+  height: calc(100vh - 140px - 140px - 60px); 
+  max-height: 400px;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fdf28c;
+  margin: auto;
+}
+
+.grid div {
+  height: 10%;
+  width: 10%;
+  border: 1px solid rgb(255, 162, 48);
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.checked {
+  background-color: #FAE20A;
+}
+
+/* .bee {
+  background-color: rgb(129, 129, 129);
+} */
+
+#status, h3 {
+  /* color: #5ce1e6; */
+  color: #FAE20A;
+}
+
+.honeypots{
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+p {
+  width: calc(100vh - 140px - 140px - 60px);
+  margin: auto;
+  margin-top: 20px;
+  color: #fdf28c;;
+}
+
+#reset {
+  background: #5ce1e6;
+  width: fit-content;
+  height: 40px;
+  border-radius: 5px;
+  color:#111c1c;
+  font-size: 20px;
+  padding: 5px 15px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+}
+
+#reset:hover{
+  transform: scale(1.2)
+}
+
+
+/* #topmenu{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#title{
+  justify-self:center;
+  width:400px;
+  margin:20px;
+}
+
+#homebutton{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100px;
+ margin: 20px;;
+} */

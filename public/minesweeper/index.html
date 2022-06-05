@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEEsweeper</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Header -->
+	<div id="header-wrapper">
+		<div id="header" class="container">
+
+			<!-- Logo -->
+				<div id="logo"><a href="/"><img src="../images/logo.png"></a></div>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="../minesweeper/index.html"><img class="game-logo active" src="../images/beetitle.png" alt=""></a></li>
+						<li class="break-right" ><a href="../snake-game/index.html"><img class="game-logo snake-logo" src="../snake-game/snake-logo-two.png" alt=""></a></li>
+						<li class="break-left"><a href="../single-player-tic-tac-toe/index.html"><img class="game-logo" src="../single-player-tic-tac-toe/tic-tac-toe-logo.png" alt=""></a></li>
+						<li><a href="../rock-paper-scissors/index.html"><img class="game-logo rock-logo" src="../images/rocktitle.png" alt=""></a></li>
+					</ul>
+				</nav>
+
+		</div>
+	</div>
+
+  <h3 class="honeypots"> Honeypots left: <span></span></h3>
+  <div class="grid"></div>
+
+  <p> Mark the squares with a honeypot to keep the bee happy that stays in the square. Right click to mark or un-mark
+    the square </p>
+
+  <h1 id="status"></h1>
+
+  <a id="reset" href="../minesweeper/index.html">Reset</a>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.dropotron.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <!-- <script type="text/javascript" src="cell.js"></script> -->
+</body>
+
+</html>
