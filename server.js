@@ -1,4 +1,5 @@
 const http = require("http");
+const cors = require("cors")
 const fs = require("fs");
 const url = require("url");
 const querystring = require("querystring");
@@ -9,6 +10,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 app.use(bodyParser.urlencoded({ extended: false }));
 const user = [];
+app.use(cors());
 app.use(express.json());
 // app.use(express.bodyParser());
 // app.set("views", __dirname + "/views/");
