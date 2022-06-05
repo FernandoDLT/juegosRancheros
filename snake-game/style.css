@@ -1,9 +1,15 @@
+html{
+    background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+    background-size: cover;
+    min-height: 100%;
+  }
+
 html,body {
     margin: 0;
     padding: 0;
 }
 body{
-    background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+    background-color: transparent;
 }
 /* nav */
 #header-wrapper{
@@ -18,6 +24,7 @@ body{
 .infoPanel{
     display:flex;
     margin: 10px 5px;
+    margin-top: 50px;
 }
 .score{
     margin-right:20px;
@@ -31,8 +38,8 @@ section {
 .gameboard {
     display: flex;
     flex-wrap: wrap;
-    width: calc(100vh - 140px - 140px - 80px);
-    height: calc(100vh - 140px - 140px - 80px); 
+    width: calc(100vh - 180px - 60px - 30px);
+    height: calc(100vh - 180px - 60px - 30px); 
     border: 2px solid #CCC;
     background: #111c1c;
 }
@@ -156,7 +163,7 @@ body.white .body{
     bottom: 0;
     content: "";
     display: block;
-    border: calc((100vh - 140px - 140px - 60px) / 10 / 2 - 2px) solid transparent;
+    border: calc((100vh - 180px - 60px - 30px) / 10 / 2 - 2px) solid transparent;
 }
 
 /* Tail Right */
