@@ -302,9 +302,3 @@ body.blue .block:hover {
 }
 
 /* mobile compatability */
-
-@media all and (max-width: 500px){
-  img.game-logo {
-      height: 100px;
-  }
-}
