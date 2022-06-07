@@ -30,6 +30,7 @@ body {
   width: 10%;
   border: 1px solid rgb(255, 162, 48);
   text-align: center;
+  line-height: 28px;
   font-size: 28px;
   font-weight: 600;
 }
@@ -80,21 +81,14 @@ p {
 }
 
 
-/* #topmenu{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-#title{
-  justify-self:center;
-  width:400px;
-  margin:20px;
-}
+/* mobile compatability */
+@media all and (max-width: 500px){
+  .grid {
+    width: 350px;
+    height: 350px;
+  }
 
-#homebutton{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width:100px;
- margin: 20px;;
-} */
+  p {
+    width: 350px;
+  }
+}
