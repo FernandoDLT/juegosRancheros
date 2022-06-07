@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--
+
+<head>
+  <!--
       This is the page head - it contains info the browser uses to display the page
       You won't see what's in the head in the page
       Scroll down to the body element for the page content
     -->
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300&display=swap"
+    rel="stylesheet">
 
-    <!-- 
+  <!-- 
       This is an HTML comment
       You can write text in a comment and the content won't be visible in the page
     -->
 
     <title>Tictactoe!</title>
-
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <!-- Meta tags for SEO and social sharing -->
     <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
     <meta
@@ -42,47 +47,69 @@
     <meta name="twitter:card" content="summary" />
 
     <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="style.css" />
     
     <!--      -->
 
-    <!-- Import the webpage's javascript file -->
-    <script src="script.js" defer></script>
+   
   </head>
   <body class="pink">
-    
+    <!-- Header -->
+	<div id="header-wrapper">
+		<div id="header" class="container">
+
+			<!-- Logo -->
+				<div id="logo"><a href="/"><img src="../images/logo.png"></a></div>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="../minesweeper/index.html"><img class="game-logo" src="../images/beetitle.png" alt=""></a></li>
+						<li class="break-right" ><a href="../snake-game/index.html"><img class="game-logo snake-logo" src="../snake-game/snake-logo-two.png" alt=""></a></li>
+						<li class="break-left"><a href="../single-player-tic-tac-toe/index.html"><img class="game-logo active" src="../single-player-tic-tac-toe/tic-tac-toe-logo.png" alt=""></a></li>
+						<li><a href="../rock-paper-scissors/index.html"><img class="game-logo rock-logo" src="../images/rocktitle.png" alt=""></a></li>
+					</ul>
+				</nav>
+
+		</div>
+	</div>
+
+  <section class="containerx">
     <!-- color scheme picker -->
-    <header>
+    <!-- <img class="game-logo" src="../single-player-tic-tac-toe/tic-tac-toe-logo.png" alt="tic-tac-toe-logo"> -->
+    <div class="settings">
       <div class="players">
         <div>Players:</div>
-        <div class="number" id="single">1</div>
-        <div class="number active" id="multi">2</div>
+        <div class="number active" id="single">1</div>
+        <div class="number" id="multi">2</div>
       </div>
       <div class="chooseColor">
         <div>Theme:</div>
-        <div class="shape curved"></div>
+        <!-- <div class="shape curved"></div> -->
         <div class="color" id="pink"></div>
         <div class="color" id="blue"></div>
-        <div class="color" id="green"></div>
+        <!-- <div class="color" id="green"></div> -->
       </div>
-    </header>  
-    <h1>Tic-Tac-Toe</h1>
-    <section class="board">
+    </div>
+
+    <section class="board curvedEdge">
       <!-- Top Row -->
-      <div class="block" id="one"></div>
-      <div class="block" id="two"></div>
-      <div class="block" id="three"></div>
-      
+      <div class="block curvedEdge" id="one"></div>
+      <div class="block curvedEdge" id="two"></div>
+      <div class="block curvedEdge" id="three"></div>
+
       <!-- Middle Row -->
-      <div class="block" id="four"></div>
-      <div class="block" id="five"></div>
-      <div class="block" id="six"></div>
+      <div class="block curvedEdge" id="four"></div>
+      <div class="block curvedEdge" id="five"></div>
+      <div class="block curvedEdge" id="six"></div>
 
       <!-- Bottom Row -->
-      <div class="block" id="seven"></div>
-      <div class="block" id="eight"></div>
-      <div class="block" id="nine"></div>
-      
+      <div class="block curvedEdge" id="seven"></div>
+      <div class="block curvedEdge" id="eight"></div>
+      <div class="block curvedEdge" id="nine"></div>
+
       <!-- strikes -->
       <div class="strike win123"></div>
       <div class="strike win456"></div>
@@ -92,19 +119,30 @@
       <div class="strike win147"></div>
       <div class="strike win258"></div>
       <div class="strike win369"></div>
-      
+
     </section>
-    <section class="controls">
-      <!--    Reset button    -->
-      <div class="reset">Reset</div>
-<!--       <div id="winner"></div> -->
-    </section>
-    <!-- PopUp -->
-    <div class="popup invisible">
-      <div class="popupText">
-        <div class="winnerText">X Wins!</div>
-        <div class="playAgain reset">Play again</div>
-      </div>
+  </section>
+  <section class="controls">
+    <!--    Reset button    -->
+    <div class="reset">Reset</div>
+    <!--       <div id="winner"></div> -->
+  </section>
+  <!-- PopUp -->
+  <div class="popup invisible">
+    <div class="popupText">
+      <div class="winnerText">X Wins!</div>
+      <div class="playAgain reset">Play again</div>
     </div>
-  </body>
+  </div>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.dropotron.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <!-- Import the webpage's javascript file -->
+  <script src="../single-player-tic-tac-toe/script.js" defer></script>
+</body>
+
 </html>

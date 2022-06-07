@@ -5,30 +5,65 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../assets/css/main.css">
+   <link rel="stylesheet" href="../assets/css/header.css">
    <link rel="stylesheet" href="style.css">
    <script src="app.js" defer></script>
+   <script src="https://kit.fontawesome.com/6399aad5f5.js" crossorigin="anonymous"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300&display=swap"
+      rel="stylesheet">
    <title>Rock Paper Scisoors Game</title>
+   <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
 
 <body>
-   <div class="wrapper">
-      <h1>Choose you step</h1>
-      <p class="link">go back to main page<a href="../">main</a></p>
-      <div class="choose">
-         <button class="btn" type="button" data-selection="rock"><img class="img-ch" src="images/rock.png"
-               alt=""></button>
-         <button class="btn" type="button" data-selection="paper"><img class="img-ch" src="images/paper.png"
-               alt=""></button>
-         <button class="btn" type="button" data-selection="scissors"><img class="img-ch" src="images/scissors.png"
-               alt=""></button>
-      </div>
-      <div class="result">
-         <div>you : <span class="result-score you" data-your-score="">0</span></div>
-         <div data-final-column>computer : <span class="result-score com" data-computer-score="">0</span></div>
-         <!-- <div class="result-sel winner"></div>
-         <div class="result-sel winner"></div> -->
+   <!-- Header -->
+   <div id="header-wrapper">
+      <div id="header" class="container">
+
+         <!-- Logo -->
+         <div id="logo"><a href="/"><img src="../images/logo.png"></a></div>
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="../minesweeper/index.html"><img class="game-logo" src="../images/beetitle.png" alt=""></a></li>
+						<li class="break-right" ><a href="../snake-game/index.html"><img class="game-logo snake-logo" src="../snake-game/snake-logo-two.png" alt=""></a></li>
+						<li class="break-left"><a href="../single-player-tic-tac-toe/index.html"><img class="game-logo" src="../single-player-tic-tac-toe/tic-tac-toe-logo.png" alt=""></a></li>
+						<li><a href="../rock-paper-scissors/index.html"><img class="game-logo rock-logo active" src="../images/rocktitle.png" alt=""></a></li>
+					</ul>
+				</nav>
+
       </div>
    </div>
+   <main>
+      <div>
+         <h1 class="directions">Choose you step</h1>
+         <div class="choose">
+            <button class="btn" type="button" data-selection="rock"><img class="img-ch" src="images/rock.png"
+                  alt=""></button>
+            <button class="btn" type="button" data-selection="paper"><img class="img-ch" src="images/paper.png"
+                  alt=""></button>
+            <button class="btn" type="button" data-selection="scissors"><img class="img-ch" src="images/scissors.png"
+                  alt=""></button>
+         </div>
+         <div class="result">
+            <div>you : <span class="result-score you" data-your-score="">0</span></div>
+            <div data-final-column>computer : <span class="result-score com" data-computer-score="">0</span></div>
+            <!-- <div class="result-sel winner"></div>
+            <div class="result-sel winner"></div> -->
+         </div>
+      </div>
+   </main>
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/jquery.dropotron.min.js"></script>
+   <script src="../assets/js/browser.min.js"></script>
+   <script src="../assets/js/breakpoints.min.js"></script>
+   <script src="../assets/js/util.js"></script>
+   <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
