@@ -38,6 +38,11 @@ li.break-right{
     height: 59px;
   }
 
+  .welcome-message{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
   
   @media screen and (max-width: 1285px){
     #nav > ul > li.break-left{

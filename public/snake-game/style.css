@@ -332,20 +332,21 @@ body.white .tail.down::after {
 
 /* mobile compatability */
 @media all and (max-width: 500px){
-    .game-logo img{
-        height: 100px;
-    }
 
     .gameboard {
       width: 350px;
       height: 350px;
     }
 
+    .gameboard .tail::after {
+        border: 17px solid transparent;
+    }
+
    .snake {
     display: flex;
     flex-wrap: wrap;
-    width: 160px;
-    height: 40px; 
+    width: 120px;
+    height: 30px; 
     /* margin-right: 25px; */
 }
 
@@ -356,7 +357,7 @@ body.white .tail.down::after {
     border: none;
 }
 .snake .tail::after {
-    border-width: calc(160px / 4 / 2 - 2px);
+    border-width: 15px;
 }
 
     .head::before,

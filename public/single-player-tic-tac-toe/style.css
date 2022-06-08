@@ -302,3 +302,16 @@ body.blue .block:hover {
 }
 
 /* mobile compatability */
+@media all and (max-width: 500px){
+  .board {
+    width: 350px;
+    height: 350px;
+    font-size: 116px;
+    line-height: 116px;
+  }
+
+  .block {
+    height: 32.5%;
+    width: 32.5%;
+  }
+}
