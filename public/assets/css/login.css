@@ -1,4 +1,4 @@
-html{
+/* html{
     background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
     background-size: cover;
     min-height: 100%;
@@ -25,8 +25,8 @@ body{
     background-image: url(../../images/logo-hat.png);
     background-size: contain;
     margin-bottom: 15px;
-}
-.login {
+} 
+ .login {
     width: 90%;
     max-width: 400px;
     background: #111c1c;
@@ -39,18 +39,80 @@ body{
     align-items: center;
     flex-wrap: wrap;
     margin: auto;
+  } */
+  html{
+    background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+    background-size: cover;
+    min-height: 100%;
+    } 
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
   }
 
+  .login{
+      height: 700px;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+      background-image: url(../../images/intro-graphic.gif);
+      background-size: 100% auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      position: relative;
+  }
+
+  .login form{
+    position: absolute;
+    bottom: 30%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .login input.name-input{
+      display: inline-block;
+      width: 70%;
+      height: 50px;
+  }
   .login button{
       border-radius: 5px;
-      margin-top: 1.5em;
+      width: 30%;
+      height: 50px;
       border-style: none;
       font-family: 'Titillium Web', sans-serif;
+      display: inline-block;
   }
 
   @media screen and (max-width: 736px){
     #navButton .toggle:before {
         display: none;
     }
+    #navPanel{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 500px){
+    /* .login form{
+         bottom: 25%    
+    } */
+    .login input.name-input{
+          width: 100%;
+          display: block;
+          height: 35px
+      }
+      .login button{
+          width: 100%;
+          display: block;
+          height: 35px;
+      }
   }
 
