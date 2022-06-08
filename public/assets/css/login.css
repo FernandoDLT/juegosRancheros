@@ -41,7 +41,7 @@ body{
     margin: auto;
   } */
   html{
-    background: linear-gradient(300deg,#000000 0%, #001a1e 55%);
+    background:rgb(0, 0, 0);
     background-size: cover;
     min-height: 100%;
     } 
@@ -52,6 +52,7 @@ body{
     align-items: center;
     height: 100vh;
     background-color: transparent;
+    font-family: 'Titillium Web', sans-serif;
   }
 
   .login{
