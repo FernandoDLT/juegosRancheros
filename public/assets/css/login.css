@@ -41,7 +41,7 @@ body{
     margin: auto;
   } */
   html{
-    background: linear-gradient(black);
+    background:rgb(0, 0, 0);
     background-size: cover;
     min-height: 100%;
     } 
