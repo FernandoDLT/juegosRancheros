@@ -26,13 +26,6 @@ body {
 .home {
   flex: 1.5;
 }
-/* #logo {
-  display: flex;
-  justify-content: center;
-} */
-#logo img {
-  /* height: 100px; */
-}
 h1 {
   color: aqua;
   text-align: center;
